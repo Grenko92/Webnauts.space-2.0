@@ -1,0 +1,111 @@
+.header__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 1230px;
+    padding-top: 57px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+}
+
+.header__logo {
+    width: 96px;
+    height: 39px;
+
+    margin-right: 204px;
+}
+
+// .header__link-inst {
+//     &:hover {
+//         background-image: url(img/svg/instagram-hover.svg);
+//     }
+// }
+
+.header__decor-line {
+    width: 1200px;
+    height: 2px;
+    background-color: @decor-color;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header__img-inst {
+    width: 40px;
+    height: 40px;
+    stroke: @main-color;
+
+    &:hover {
+        stroke: @accent-color;
+    }
+}
+
+.header__img-telegram {
+    width: 40px;
+    height: 40px;
+
+    margin-right: 20px;
+    --telegram-circle-stroke: @main-color;
+    --telegram-icon-fill:  @main-color;
+
+    &:hover {
+        --telegram-circle-stroke: @accent-color;
+        --telegram-icon-fill:  @accent-color;
+    }
+}
+
+.mobile___menu{
+    display: none;
+    flex-direction: column;
+    :last-child{
+        width: 18px;
+        margin-bottom: 0!important;
+    }
+    &-line{
+        display: inline-block;
+        width: 32px;
+        height: 2px;
+        background-color: black;
+        border-radius: 7px;
+        margin-bottom: 9px;
+        transition: margin 0.3s 0.3s, transform 0.3s;
+    }
+}
+
+.mobile___menu.active{
+    &-line{
+        margin: 0;
+        transition: margin 0.3s 0.3s, transform 0.3s;
+    }
+    :nth-child(1) {
+        margin: 0;
+        transform: rotate(45deg) translateX(2px);
+        transition: margin 0.3s, transform 0.3s 0.3s;
+    }
+    :nth-child(2) {
+        margin: 0;
+        transform: rotate(-45deg);
+        transition: transform 0.3s 0.3s;
+    }
+    :nth-child(3) {
+        opacity: 0;
+        //transition: opacity 0.3s 0.3s;
+    }
+}
+
+@media (max-width: 500px) {
+    .header__wrapper{
+        padding: 25px 15px;
+        justify-content: space-between;
+    }
+
+    .header__logo{
+        width: 61px;
+        height: 24px;
+        margin-right: 0;
+    }
+    .mobile___menu{
+        display: flex;
+    }
+}

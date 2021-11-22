@@ -1,0 +1,41 @@
+.events {
+    display: none;
+}
+
+.events__container-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.events__btn-arrow-ctrl {
+    .btn-reset ();
+}
+
+.events__events-list {
+    padding-top: 107px;
+}
+
+.events__arrow-left-circle-icon {
+    width: 80px;
+    height: 80px;
+
+    fill: none;
+    --arrow-stroke: #E00822;
+
+    &:hover {
+        fill: @accent-color;
+        --arrow-stroke: #FFFFFF;
+    }
+}
+
+.events__arrow-right-circle-icon {
+    width: 80px;
+    height: 80px;
+}
+
+
+@media (max-width: 500px) {
+    .events__events-list{
+        padding-top: 63px;
+    }
+}

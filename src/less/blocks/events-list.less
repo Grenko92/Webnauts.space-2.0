@@ -1,0 +1,24 @@
+.events-list__events-item {
+    display: flex;
+    align-items: flex-start;
+
+    padding-top: 30px;
+    padding-bottom: 33px;
+
+    border-top: 2px solid @additional-text-color;
+
+        &:last-child {
+            border-bottom: 2px solid @additional-text-color;
+        }
+}
+
+@media (max-width: 500px) {
+    .events-list__events-item{
+        flex-direction: column;
+        padding-bottom: 40px;
+    }
+
+    .events__ctrl{
+        display: none;
+    }
+}
